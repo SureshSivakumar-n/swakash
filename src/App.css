@@ -1,38 +1,396 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #fff;
+  opacity: 1;
+  /* Firefox */
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.banner img {
+  position: absolute;
+  width: 100%;
+}
+
+header {
+  background-image: url('./Img/banner1.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+nav {
+  background-color: #fff;
+  box-shadow: 0px 3px 5px #eaeaea;
+  opacity: 0.7;
+}
+
+.navbar {
+  display: grid;
+  grid-template-columns: 10% 80% 5% 5%;
+  align-items: center;
+  padding: 1%;
+}
+
+.navbar a {
+  color: #3f78e3;
+}
+
+.navitem {
+  display: grid;
+  grid-template-columns: 90% 10%;
+  align-items: center;
+}
+
+.nav-logo img {
+  width: 45%;
+}
+
+.nav-links {
+  display: grid;
+  grid-template-columns: repeat(6, 13%);
+  text-align: center;
+  list-style: none;
+  text-decoration: none;
+  position: relative;
+}
+
+nav .fa {
+  display: block;
+  color: #000;
+  margin: 10px 25px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.nav-links li::after {
+  content: '';
+  width: 0;
+  height: 2px;
+  background: #0000D7;
+  display: block;
+  margin: auto;
+  transition: .5s;
+}
+
+.nav-links li:hover::after {
+  width: 100%;
+}
+
+
+.banner-title {
+  position: relative;
+  padding: 3%;
+  color: #797979;
+  width: 50%;
+}
+
+.banner-title h1 {
+  font-size: 3em;
+  margin-bottom: 25px;
+}
+
+.banner-title h1 span {
+  color: blue;
+}
+
+.banner-title button {
+  margin: 1em;
+  border-radius: 5px;
+  font-size: 13px;
+  padding: 1em 1.5em;
+  color: blue;
+  cursor: pointer;
+  border: 1px solid;
+
+}
+
+.features {
+  margin-bottom: 2%;
+  text-align: center;
+  margin-top: 1%;
+  font-size: 12px;
+}
+
+h2 {
+  padding: 3%;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.divider {
+  background-color: #f7f7f7;
+  padding: 3%;
+  margin: 2% 0 2% 0;
+  color: #3f78e3;
+  font-size: 1.5em;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+.features button {
+  background-color: #F5F7FE;
+  color: #3f78e3;
+  padding: 3%;
+  border: 1px solid #F5F7FE;
+  border-radius: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.features button:hover {
+  color: #F5F7Fe;
+  background-color: #3f78e3;
+  ;
+}
+
+.feature-container,
+.service-container {
+  display: grid;
+  grid-template-columns: repeat(3, 32%);
+  grid-gap: 2%;
+  text-align: center;
+  margin-bottom: 5%;
+}
+
+.feature-container h3,
+.service-container h3 {
+  text-align: center;
+  padding: 3%
+}
+
+.service-container img {
+  width: 45px;
+  border-radius: 40px;
+  padding: 5%;
+  background-color: #fff;
+}
+
+
+
+.feature-container p,
+.service-container p {
+  color: #000;
+  text-align: center;
+  line-height: 1.4;
+  margin-bottom: 15px;
+}
+
+.feature-container img {
+  width: 100%;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 5px 10px #b5b5b5;
+}
+
+.feature-container h2,
+.service-container h2 {
+  text-align: center;
+}
+
+.feature-container div,
+.service-containe div {
+  margin-bottom: 5%;
+}
+
+.wrapper {
+  background-image: url('./Img/validation.jpg');
+  background-size: cover;
+}
+
+.contact-form {
+  display: grid;
+  grid-template-columns: 60% 40%;
+
+
+}
+
+.form-control {
+  display: grid;
+  grid-template-columns: 45% 45%;
+  grid-gap: 5%;
+  padding: 10% 0 10% 0;
+}
+
+.input {
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid white;
+  padding: 10px;
+  color: #fff;
+}
+
+.expert {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+}
+
+.expert img {
+  width: 125%;
+}
+
+.expert-title {
+  position: relative;
+  padding: 8%;
+  color: #797979;
+}
+
+.expert-title h1 {
+  font-size: 52px;
+  margin-bottom: 25px;
+}
+
+.expert .img {
+  background-image: url('./Img/banner1.jpg');
+  background-size: cover;
+}
+
+.expert-title h1 span {
+  color: blue;
+}
+
+.expert-title button {
+  margin: 1em;
+  border-radius: 5px;
+  font-size: 13px;
+  padding: 1em 1.5em;
+  color: blue;
+  cursor: pointer;
+  border: 1px solid;
+
+}
+
+
+.subscribe input {
+  padding: 3%;
+  border: 1px solid #eaeaea;
+  border-radius: 40px;
+}
+
+.subscribe button {
+  padding: 3% 5%;
+  margin-left: -105px;
+  border-radius: 40px;
+  border: 1px solid #eaeaea;
+}
+
+.subscribe section {
+  display: grid;
+  grid-template-columns: 85% 5%;
+  width: 100%;
+}
+
+.wrapper button {
+  margin-top: 30px;
+  border-radius: 5px;
+  padding: 1em 1.5em;
+  border: 1px solid white !important;
+  background-color: transparent;
+  cursor: pointer;
+  color: #797979
+}
+
+.val {
+  color: #fff;
+  margin-top: 15%;
+  text-align: center;
+}
+
+.val span {
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  color: sandybrown;
 }
 
-.App-link {
-  color: #61dafb;
+footer {
+  background-color: #f5f5f5;
+  padding: 8% 5% 2%;
+  display: grid;
+  grid-template-columns: 35% 65%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+footer section {
+  margin-bottom: 5%;
+}
+
+footer .nav-links {
+  display: grid;
+  grid-template-columns: 100%;
+  width: 20%;
+}
+
+footer li {
+  padding: 3%;
+  text-align: left;
+}
+
+
+@media only screen and (max-width: 768px) {
+
+  .container {
+    width: 85%;
   }
-  to {
-    transform: rotate(360deg);
+
+  .navbar .nav-links {
+    display: grid;
+    grid-template-columns: 100%;
+  }
+
+  .navbar .nav-links li {
+    text-align: left;
+  }
+
+  .banner-title {
+    width: 100% !important;
+  }
+
+  .banner-title h1 {
+    font-size: 2em;
+  }
+
+  .feature-container,
+  .service-container {
+    display: grid;
+    grid-template-columns: 100% !important;
+    margin-bottom: 10%;
+    grid-gap: 0;
+
+  }
+
+  .contact-form {
+    grid-template-columns: 100%;
+  }
+
+  .form-control {
+    grid-template-columns: 100%;
+    grid-gap: 0;
+  }
+
+  .val {
+    margin-bottom: 10%;
+  }
+
+  .expert {
+    grid-template-columns: 100%;
+  }
+
+  footer {
+    grid-template-columns: 100%;
+  }
+
+  .hide{
+    display: none !important;
+  }
+  .show{
+    display: grid !important;
   }
 }
